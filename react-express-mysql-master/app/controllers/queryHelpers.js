@@ -48,7 +48,7 @@ const getAllTutorials = async (title) => {
 const getUser = async (id) => {
     const connection = await getConnection();
     return connection.execute(
-        "select e.id,e.username,e.email ,e.password from users e where e.id=?",
+        "select e.id,e.username,e.email ,e.password from users e where e.username=?",
         [id]
     );
 };
